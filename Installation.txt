@@ -1,0 +1,29 @@
+1. npm init -y
+2. npm install tailwindcss
+3. Create public folder and inside it put the templates (HTML,CSS)
+4. Create src folder and inside it create style.css and paste 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+5. Link the tailwindcss to the template
+    <link rel="stylesheet" href="styles.css">
+
+6. Inside package.jason >> inside script  >>  "build-css": "tailwindcss build src/style.css -o public/style.css"
+7. Run npm run build-css
+8. npx tailwindcss init --full
+9. Update the content >>  './public/**/*.{html,js}',
+10. npm run build-css
+11. npx tailwindcss -i ./src/styles.css -o  ./public/styles.css --watch
+12. If u want to put extra config such as 
+        fontSize: {
+      mammoth: '8rem',
+        }
+13. Run npm run build-css
+14. Rerun npx tailwindcss -i ./src/styles.css -o  ./public/styles.css --watch
+15. Use different config for custom css styles
+      >>Delete original one and run npx tailwind css init --full
+16  Rename the original to "tailwind-default.config.js" and run npx tailwindcss init for another new
+17. Comment the original content src and paste that src into the new config >> content >> './public/**/*.{html,js}',
+18. Create new custom styles and after that run "npm run build-css" and rerun the num.14.
